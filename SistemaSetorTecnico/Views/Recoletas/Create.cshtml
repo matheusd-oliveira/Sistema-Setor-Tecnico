@@ -1,0 +1,68 @@
+﻿@model SistemaSetorTecnico.Models.Recoleta
+
+@{
+    ViewData["Title"] = "Nova Recoleta";
+}
+<h2>Adicionar Recoleta</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Empresa"></label>
+        <input asp-for="Empresa" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="TecnicoResponsavel">Tecnico Responsável</label>
+        <input asp-for="TecnicoResponsavel" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <label asp-for="DataRecoleta">Data da Recoleta</label>
+        <input asp-for="DataRecoleta" type="date" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LocalRecoleta">Local da Recoleta</label>
+        <input asp-for="LocalRecoleta" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Serie"></label>
+        <input asp-for="Serie" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="NumeroOS">Número da OS</label>
+        <input asp-for="NumeroOS" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="NomePaciente">Nome do Paciente</label>
+        <input asp-for="NomePaciente" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Exame"></label>
+        <input asp-for="Exame" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="MotivoRecoleta">Motivo da Recoleta</label>
+        <input asp-for="MotivoRecoleta" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="LaboratorioApoio">Laboratório de Apoio</label>
+        <input asp-for="LaboratorioApoio" class="form-control" />
+    </div>
+
+    @if (User.IsInRole("Admin"))
+    {
+        <div class="form-group">
+            <label asp-for="BioquimicoResponsavel">Bioquímico Responsável</label>
+            <input asp-for="BioquimicoResponsavel" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="DataContato">Data de Contato</label>
+            <input asp-for="DataContato" type="date" class="form-control" />
+        </div>
+    }
+
+    <div class="form-group">
+        <label asp-for="ColetaConcluida">Coleta Concluida</label>
+        <input asp-for="ColetaConcluida" type="checkbox" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Salvar</button>
+</form>

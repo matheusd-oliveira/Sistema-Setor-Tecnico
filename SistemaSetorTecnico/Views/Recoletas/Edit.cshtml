@@ -1,0 +1,97 @@
+﻿@model SistemaSetorTecnico.Models.Recoleta
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<h1>Editar</h1>
+
+<h4>Recoleta</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Empresa" class="control-label"></label>
+                <input asp-for="Empresa" class="form-control" />
+                <span asp-validation-for="Empresa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TecnicoResponsavel" class="control-label"></label>
+                <input asp-for="TecnicoResponsavel" class="form-control" />
+                <span asp-validation-for="TecnicoResponsavel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataRecoleta" class="control-label"></label>
+                <input asp-for="DataRecoleta" class="form-control" />
+                <span asp-validation-for="DataRecoleta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LocalRecoleta" class="control-label"></label>
+                <input asp-for="LocalRecoleta" class="form-control" />
+                <span asp-validation-for="LocalRecoleta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Serie" class="control-label"></label>
+                <input asp-for="Serie" class="form-control" />
+                <span asp-validation-for="Serie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumeroOS" class="control-label"></label>
+                <input asp-for="NumeroOS" class="form-control" />
+                <span asp-validation-for="NumeroOS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomePaciente" class="control-label"></label>
+                <input asp-for="NomePaciente" class="form-control" />
+                <span asp-validation-for="NomePaciente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Exame" class="control-label"></label>
+                <input asp-for="Exame" class="form-control" />
+                <span asp-validation-for="Exame" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MotivoRecoleta" class="control-label"></label>
+                <input asp-for="MotivoRecoleta" class="form-control" />
+                <span asp-validation-for="MotivoRecoleta" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaboratorioApoio" class="control-label"></label>
+                <input asp-for="LaboratorioApoio" class="form-control" />
+                <span asp-validation-for="LaboratorioApoio" class="text-danger"></span>
+            </div>
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="form-group">
+                    <label asp-for="BioquimicoResponsavel" class="control-label"></label>
+                    <input asp-for="BioquimicoResponsavel" class="form-control" />
+                    <span asp-validation-for="BioquimicoResponsavel" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DataContato" class="control-label"></label>
+                    <input asp-for="DataContato" class="form-control" />
+                    <span asp-validation-for="DataContato" class="text-danger"></span>
+                </div>
+            }
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="ColetaConcluida" /> @Html.DisplayNameFor(model => model.ColetaConcluida)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
