@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w4le+NJyQfHJBvA5kZGP8kjSFW9RgmaurW8SzX2vAPkKznEINCSIx6KNaY4wO8Ya2zxpvAn3QHw3Fsax9xnHkw==",
+  "dgSpecHash": "/tBjIidFcRU/GI9/5AmqzX7vK60w5vw5d/0AOqHlfBkv9dGDQeN0xgZCNmHdV9/N7gfNpY/K82B2nXZ/LXHfxg==",
   "success": true,
-  "projectFilePath": "D:\\Projetos\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
+  "projectFilePath": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

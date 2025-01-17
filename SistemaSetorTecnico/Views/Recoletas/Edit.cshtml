@@ -4,94 +4,136 @@
     ViewData["Title"] = "Editar";
 }
 
-<h1>Editar</h1>
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Edição de Recoletas</h1\>
+    </div>
 
-<h4>Recoleta</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
+    <div class="w-full max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-md">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Empresa" class="control-label"></label>
-                <input asp-for="Empresa" class="form-control" />
-                <span asp-validation-for="Empresa" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="Empresa" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Empresa" class="form-control" />
+                    <span asp-validation-for="Empresa" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="TecnicoResponsavel" class="control-label"></label>
-                <input asp-for="TecnicoResponsavel" class="form-control" />
-                <span asp-validation-for="TecnicoResponsavel" class="text-danger"></span>
+
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="TecnicoResponsavel" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="TecnicoResponsavel" class="form-control" />
+                    <span asp-validation-for="TecnicoResponsavel" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="DataRecoleta" class="control-label"></label>
-                <input asp-for="DataRecoleta" class="form-control" />
-                <span asp-validation-for="DataRecoleta" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="DataRecoleta" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="DataRecoleta" class="form-control" />
+                    <span asp-validation-for="DataRecoleta.Date" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="LocalRecoleta" class="control-label"></label>
-                <input asp-for="LocalRecoleta" class="form-control" />
-                <span asp-validation-for="LocalRecoleta" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="LocalRecoleta" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="LocalRecoleta" class="form-control" />
+                    <span asp-validation-for="LocalRecoleta" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Serie" class="control-label"></label>
-                <input asp-for="Serie" class="form-control" />
-                <span asp-validation-for="Serie" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="Serie" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Serie" class="form-control" />
+                    <span asp-validation-for="Serie" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="NumeroOS" class="control-label"></label>
-                <input asp-for="NumeroOS" class="form-control" />
-                <span asp-validation-for="NumeroOS" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="NumeroOS" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="NumeroOS" class="form-control" />
+                    <span asp-validation-for="NumeroOS" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="NomePaciente" class="control-label"></label>
-                <input asp-for="NomePaciente" class="form-control" />
-                <span asp-validation-for="NomePaciente" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="NomePaciente" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="NomePaciente" class="form-control" />
+                    <span asp-validation-for="NomePaciente" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Exame" class="control-label"></label>
-                <input asp-for="Exame" class="form-control" />
-                <span asp-validation-for="Exame" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="Exame" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Exame" class="form-control" />
+                    <span asp-validation-for="Exame" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="MotivoRecoleta" class="control-label"></label>
-                <input asp-for="MotivoRecoleta" class="form-control" />
-                <span asp-validation-for="MotivoRecoleta" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="MotivoRecoleta" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="MotivoRecoleta" class="form-control" />
+                    <span asp-validation-for="MotivoRecoleta" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="LaboratorioApoio" class="control-label"></label>
-                <input asp-for="LaboratorioApoio" class="form-control" />
-                <span asp-validation-for="LaboratorioApoio" class="text-danger"></span>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="LaboratorioApoio" class="control-label"></label>
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="LaboratorioApoio" class="form-control" />
+                    <span asp-validation-for="LaboratorioApoio" class="text-danger"></span>
+                </div>
             </div>
             @if (User.IsInRole("Admin"))
             {
-                <div class="form-group">
-                    <label asp-for="BioquimicoResponsavel" class="control-label"></label>
-                    <input asp-for="BioquimicoResponsavel" class="form-control" />
-                    <span asp-validation-for="BioquimicoResponsavel" class="text-danger"></span>
+                <div class="mb-4">
+                    <div class="form-group">
+                        <label asp-for="BioquimicoResponsavel" class="control-label"></label>
+                        <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="BioquimicoResponsavel" class="form-control" />
+                        <span asp-validation-for="BioquimicoResponsavel" class="text-danger"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label asp-for="DataContato" class="control-label"></label>
-                    <input asp-for="DataContato" class="form-control" />
-                    <span asp-validation-for="DataContato" class="text-danger"></span>
+                <div class="mb-4">
+                    <div class="form-group">
+                        <label asp-for="DataContato" class="control-label"></label>
+                        <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="DataContato" class="form-control" />
+                        <span asp-validation-for="DataContato.Value" class="text-danger"></span>
+                    </div>
                 </div>
             }
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="ColetaConcluida" /> @Html.DisplayNameFor(model => model.ColetaConcluida)
-                </label>
+            <div class="mb-4">
+                <div class="form-group">
+                    <label asp-for="ColetaConcluida" class="control-label"></label>
+                    <input type="checkbox" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="ColetaConcluida" class="form-control" />
+                    <span asp-validation-for="ColetaConcluida" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+
+            <div class="mb-4">
+                <button type="submit"
+                        class="w-full px-4 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 focus:outline-none">
+                    Salvar
+                </button>
             </div>
+
+            <div class="mb-4">
+                <button class="w-full px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:ring-blue-300 focus:outline-none"
+                        asp-action="Index" asp-controller="Recoletas">
+                    Voltar
+                </button>
+            </div>
+
+
         </form>
     </div>
-</div>
+</body>
 
-<div>
-    <a asp-action="Index">Voltar</a>
+
+<div class="mb-6">
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projetos\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj": {}
+    "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj": {}
   },
   "projects": {
-    "D:\\Projetos\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj": {
+    "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projetos\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
+        "projectUniqueName": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
         "projectName": "SistemaSetorTecnico",
-        "projectPath": "D:\\Projetos\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
+        "projectPath": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
         "packagesPath": "C:\\Users\\matheus.oliveira\\.nuget\\packages\\",
-        "outputPath": "D:\\Projetos\\SistemaSetorTecnico\\obj\\",
+        "outputPath": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files\\Microsoft Visual Studio\\Shared\\NuGetPackages"
