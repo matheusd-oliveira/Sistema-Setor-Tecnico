@@ -6,34 +6,44 @@ namespace SistemaSetorTecnico.Models
     public class Recoleta
     {
         public int Id { get; set; }
+
+        [Required(ErrorMessage = "O nome do técnico é necessário.")]
         public string Empresa { get; set; }
 
         [DisplayName("Técnico Reponsável")]
+        [Required(ErrorMessage = "O nome do técnico é obrigatório.")]
         public string TecnicoResponsavel { get; set; }
 
         [DisplayName("Data da Recoleta")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Required(ErrorMessage = "Preencha a data que foi realizada a recoleta.")]
         public DateTime DataRecoleta { get; set; }
 
         [DisplayName("Local da Recoleta")]
+        [Required(ErrorMessage = "Qual o local da recoleta?")]
         public string LocalRecoleta { get; set; }
 
         [DisplayName("Série")]
+        [Required(ErrorMessage = "Preencha o número de série")]
         public string Serie { get; set; }
 
         [DisplayName("Número da OS")]
+        [Required(ErrorMessage = "O número da OS é obrigatório.")]
         public string NumeroOS { get; set; }
 
         [DisplayName("Nome do Paciente")]
+        [Required(ErrorMessage = "O nome do paciente é necessário.")]
         public string NomePaciente { get; set; }
 
         public string Exame { get; set; }
 
         [DisplayName("Motivo da Recoleta")]
+        [Required(ErrorMessage = "Qual o motivo da recoleta?")]
         public string MotivoRecoleta { get; set; }
 
         [DisplayName("Laboratorio de Apoio")]
+        [Required(ErrorMessage = "Insira o laboratório de apoio.")]
         public string LaboratorioApoio { get; set; }
 
         [DisplayName("Bioquimico Responsável")]
@@ -41,7 +51,8 @@ namespace SistemaSetorTecnico.Models
 
         [DisplayName("Data do Contato")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [Required(ErrorMessage = "O nome do técnico é necessário.")]
         public DateTime? DataContato { get; set; } // Apenas para Administradores
 
         [DisplayName("Coleta Concluida")]

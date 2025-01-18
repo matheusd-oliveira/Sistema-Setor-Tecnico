@@ -3,19 +3,23 @@
   "WorkspaceRootPath": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\recoletas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\recoletas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\models\\recoleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:models\\recoleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\recoletas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\views\\recoletas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\recoletas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\controllers\\recoletascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:controllers\\recoletascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -31,19 +35,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Recoletas\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recoletas\\Index.cshtml",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Recoletas\\Index.cshtml",
+              "RelativeToolTip": "Views\\Recoletas\\Index.cshtml",
+              "ViewState": "AQIAACoAAAAAAAAAAAAAACsAAABBAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-01-18T13:33:42.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAgwDEAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-18T13:17:36.293Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Recoleta.cs",
               "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Models\\Recoleta.cs",
               "RelativeDocumentMoniker": "Models\\Recoleta.cs",
               "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Models\\Recoleta.cs",
               "RelativeToolTip": "Models\\Recoleta.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAwCwAAAAYAAAA",
+              "ViewState": "AQIAACYAAAAAAAAAAAAcwC4AAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-17T19:05:41.737Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Login.cshtml",
               "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Auth\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
@@ -57,25 +87,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RecoletasController.cs",
-              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Controllers\\RecoletasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RecoletasController.cs",
-              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Controllers\\RecoletasController.cs",
-              "RelativeToolTip": "Controllers\\RecoletasController.cs",
-              "ViewState": "AQIAAFsAAAAAAAAAAAAcwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-17T17:58:26.051Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Recoletas\\Edit.cshtml",
               "RelativeDocumentMoniker": "Views\\Recoletas\\Edit.cshtml",
               "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Recoletas\\Edit.cshtml",
               "RelativeToolTip": "Views\\Recoletas\\Edit.cshtml",
-              "ViewState": "AQIAAGwAAAAAAAAAAAAqwHQAAAASAAAA",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAqwHEAAABfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-01-15T14:06:34.493Z",
               "EditorCaption": ""

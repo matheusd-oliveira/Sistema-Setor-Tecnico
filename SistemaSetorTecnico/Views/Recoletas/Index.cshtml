@@ -32,32 +32,32 @@
         <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow text-sm">
             <thead>
                 <tr class="bg-gray-100 text-gray-700">
-                    <th class="py-3 px-6 text-left">Empresa</th>
-                    <th class="py-3 px-6 text-left">Técnico</th>
-                    <th class="py-3 px-6 text-left">Data</th>
-                    <th class="py-3 px-6 text-left">Série</th>
-                    <th class="py-3 px-6 text-center">OS</th>
-                    <th class="py-3 px-6 text-center">Apoio</th>
-                    <th class="py-3 px-6 text-center">Motivo</th>
-                    <th class="py-3 px-6 text-center">Bioquímico</th>
-                    <th class="py-3 px-6 text-center">Data do Contato</th>
-                    <th class="py-3 px-6 text-center">Status</th>
-                    <th class="py-3 px-6 text-center">Ações</th>
+                    <th class="py-3 px-3 text-left">Empresa</th>
+                    <th class="py-3 px-3 text-left">Técnico</th>
+                    <th class="py-3 px-3 text-left">Data</th>
+                    <th class="py-3 px-3 text-left">Série</th>
+                    <th class="py-3 px-3 text-center">OS</th>
+                    <th class="py-3 px-3 text-center">Apoio</th>
+                    <th class="py-3 px-3 text-center">Motivo</th>
+                    <th class="py-3 px-3 text-center">Bioquímico</th>
+                    <th class="py-3 px-3 text-center">Data do Contato</th>
+                    <th class="py-3 px-3 text-center">Status</th>
+                    <th class="py-3 px-3 text-center">Ações</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr class="border-t text-sm">
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.Empresa)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.TecnicoResponsavel)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.DataRecoleta)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.Serie)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.NumeroOS)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.LaboratorioApoio)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.MotivoRecoleta)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.BioquimicoResponsavel)</td>
-                        <td class="py-3 px-5">@Html.DisplayFor(modelItem => item.DataContato)</td>
+                    <tr class="border-t text-xs">
+                        <td class="py-3 px-3">@Html.DisplayFor(modelItem => item.Empresa)</td>
+                        <td class="py-3 px-3">@Html.DisplayFor(modelItem => item.TecnicoResponsavel)</td>
+                        <td class="py-3 px-3">@Html.DisplayFor(modelItem => item.DataRecoleta)</td>
+                        <td class="py-3 px-3">@Html.DisplayFor(modelItem => item.Serie)</td>
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.NumeroOS)</td>
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.LaboratorioApoio)</td>
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.MotivoRecoleta)</td>
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.BioquimicoResponsavel)</td>
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.DataContato)</td>
                         @*<td class="py-3 px-6">@Html.DisplayFor(modelItem => item.ColetaConcluida)</td>*@
 
                         @if (item.ColetaConcluida)
