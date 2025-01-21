@@ -143,6 +143,7 @@ namespace SistemaSetorTecnico.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            var errors = ModelState.Values.SelectMany(v => v.Errors).Select(e => e.ErrorMessage).ToList();
             return View(recoleta);
         }
 

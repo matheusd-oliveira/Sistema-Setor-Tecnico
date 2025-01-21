@@ -11,20 +11,21 @@ namespace SistemaSetorTecnico
 
         public static void Main(string[] args)
         {
-            
+
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
             builder.Services.AddAuthentication("Cookies").AddCookie("Cookies",
-                options => 
+                options =>
                 {
                     options.LoginPath = "/Auth/Login";
                     options.LogoutPath = "/Auth/Logout";
                 }
-            ) ;
+            );
             builder.Services.AddAuthorization();
 
 

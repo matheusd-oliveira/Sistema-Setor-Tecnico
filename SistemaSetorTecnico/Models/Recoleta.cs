@@ -47,12 +47,11 @@ namespace SistemaSetorTecnico.Models
         public string LaboratorioApoio { get; set; }
 
         [DisplayName("Bioquimico Responsável")]
-        public string BioquimicoResponsavel { get; set; } // Apenas para Administradores
+        public string? BioquimicoResponsavel { get; set; } // Apenas para Administradores
 
         [DisplayName("Data do Contato")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        [Required(ErrorMessage = "O nome do técnico é necessário.")]
         public DateTime? DataContato { get; set; } // Apenas para Administradores
 
         [DisplayName("Coleta Concluida")]
