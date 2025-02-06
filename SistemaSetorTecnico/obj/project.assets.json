@@ -8733,6 +8733,7 @@
     "net8.0": [
       "Microsoft.AspNetCore.Authentication.Cookies >= 2.2.0",
       "Microsoft.AspNetCore.Identity >= 2.2.0",
+      "Microsoft.CodeAnalysis.Common >= 4.8.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
@@ -8796,6 +8797,10 @@
           "Microsoft.AspNetCore.Identity": {
             "target": "Package",
             "version": "[2.2.0, )"
+          },
+          "Microsoft.CodeAnalysis.Common": {
+            "target": "Package",
+            "version": "[4.8.0, )"
           },
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",

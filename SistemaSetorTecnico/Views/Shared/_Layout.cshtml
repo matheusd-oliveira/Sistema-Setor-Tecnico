@@ -31,7 +31,7 @@
                     @if (User.IsInRole("Admin"))
                     { 
                         <a class="hover:underline" asp-controller="Usuarios" asp-action="Index">Gerenciar Usuários</a>
-                        
+                        <a class="hover:underline" asp-controller="Relatorios" asp-action="Index">Relatórios</a>
                     }
                     @if (User.Identity.IsAuthenticated)
                     {

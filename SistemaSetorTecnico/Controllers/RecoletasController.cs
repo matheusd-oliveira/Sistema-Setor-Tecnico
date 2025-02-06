@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +15,8 @@ namespace SistemaSetorTecnico.Controllers
     [Authorize]
     public class RecoletasController : Controller
     {
+
+        private readonly IWebHostEnvironment _webHostEnv;
         private readonly ApplicationDbContext _context;
 
         public RecoletasController(ApplicationDbContext context)
@@ -50,6 +53,8 @@ namespace SistemaSetorTecnico.Controllers
                     // Opcional: Adicionar lógica para tratar valores inválidos
                     ModelState.AddModelError("", "O formato da data deve ser MM/YYYY.");
                 }
+
+                return View(recoletas.ToList());
             }
             // Retorna os dados para a View
             return View(recoletas.ToList());
