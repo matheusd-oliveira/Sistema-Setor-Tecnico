@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SistemaSetorTecnico")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92304d1ad229fbdbb0d7d2c5c196c4b698fae6ca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e09bf024c1ec2abb7370a2f767007a35fca8deaa")]
 [assembly: System.Reflection.AssemblyProductAttribute("SistemaSetorTecnico")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SistemaSetorTecnico")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

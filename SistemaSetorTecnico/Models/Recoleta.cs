@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SistemaSetorTecnico.Models
 {
@@ -54,8 +55,20 @@ namespace SistemaSetorTecnico.Models
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
         public DateTime? DataContato { get; set; } // Apenas para Administradores
 
+
+        // Chave estrangeira
+        //[ForeignKey("StatusId")]
+        public int StatusId { get; set; }
+
         [DisplayName("Coleta Concluida")]
         public bool ColetaConcluida { get; set; }
+
+        //// Propriedade de navegação.
+        [NotMapped]
+        public Status Status { get; set; }
+        
+        
+
     }
 
 }

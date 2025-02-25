@@ -13,13 +13,13 @@
 
     @* <link rel="stylesheet" href="~/SistemaSetorTecnico.styles.css" asp-append-version="true" /> *@
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="flex flex-col min-h-screen bg-gray-100 text-gray-800">
     <header class="bg-blue-600 text-white shadow">
         @if ((ViewData["IsLoginPage"] == null) || (!ViewData["IsLoginPage"].ToString().Equals("true")))
         {
             <div class="container mx-auto flex justify-between items-center px-4 py-3">
                 <a class="text-xl font-bold tracking-wide" asp-area="" asp-controller="Home" asp-action="Index">
-                    SistemaSetorTecnico
+                    Sistema Setor Tecnico
                 </a>
                 <!-- Menu Button for Mobile -->
 
@@ -29,9 +29,9 @@
                         <a class="hover:underline" asp-controller="Auth" asp-action="Login">Login</a>
                     }
                     @if (User.IsInRole("Admin"))
-                    { 
+                    {
                         <a class="hover:underline" asp-controller="Usuarios" asp-action="Index">Gerenciar Usuários</a>
-                        <a class="hover:underline" asp-controller="Relatorios" asp-action="Index">Relatórios</a>
+                        <a class="hover:underline" href="https://app.powerbi.com/view?r=eyJrIjoiNzFhYjFlYmUtNmJiNy00YTMwLWE3MWQtODBkODdhYjU1NDA3IiwidCI6ImJmN2ExNmE5LTYwNjUtNDE4NC1hZjk5LTlhOTk0ZGZlNDJjMCJ9" target="_blank">Relatórios</a>
                     }
                     @if (User.Identity.IsAuthenticated)
                     {
@@ -40,12 +40,12 @@
                         <form asp-controller="Auth" asp-action="Logout" method="post" class="hover\:underline">
                             <button type="submit" class="btn btn-link nav-link logout-button">Logout</button>
                         </form>
-                    }              
+                    }
             </div>
         }
     </header>
     <div>
-        <main role="main" class="container mx-auto px-4 py-6">
+        <main role="main" class="position-relative container mx-auto px-4 py-6" style="padding-bottom: 200px;">
             @RenderBody()
         </main>
     </div>
@@ -60,6 +60,7 @@
             </div>
         </div>
     </footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

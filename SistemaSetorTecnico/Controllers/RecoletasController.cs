@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SistemaSetorTecnico.Data;
+using SistemaSetorTecnico.DTOs;
 using SistemaSetorTecnico.Models;
 
 namespace SistemaSetorTecnico.Controllers
@@ -30,9 +31,15 @@ namespace SistemaSetorTecnico.Controllers
             // Pegando a data atual
             var dataAtual = DateTime.Now;
 
+            // Recupera todas as recoletas do sistema
+            var recoletas = _context.Recoletas.AsQueryable();
+
             // Recupera todas as recoletas por mês vigente
-            var recoletas = _context.Recoletas.
+            if (string.IsNullOrEmpty(searchValue))
+            {
+                recoletas = _context.Recoletas.
                 Where(r => r.DataRecoleta.Month == dataAtual.Month && r.DataRecoleta.Year == dataAtual.Year);
+            }
 
             // Filtro pelo nome do técnico
             // Se o usuário selecionou "Técnico Responsável"
@@ -41,7 +48,7 @@ namespace SistemaSetorTecnico.Controllers
                 recoletas = recoletas.Where(r => r.TecnicoResponsavel.Contains(searchValue));
             }
             // Se o usuário selecionou "Data"
-            else if (searchBy == "Data" && !string.IsNullOrEmpty(searchValue))
+            if (searchBy == "Data" && !string.IsNullOrEmpty(searchValue))
             {
                 // Tentar interpretar o searchValue como mês/ano (formato esperado: MM/YYYY)
                 if (DateTime.TryParseExact(searchValue, "MM/yyyy", null, System.Globalization.DateTimeStyles.None, out var selectedDate))
@@ -53,8 +60,7 @@ namespace SistemaSetorTecnico.Controllers
                     // Opcional: Adicionar lógica para tratar valores inválidos
                     ModelState.AddModelError("", "O formato da data deve ser MM/YYYY.");
                 }
-
-                return View(recoletas.ToList());
+ 
             }
             // Retorna os dados para a View
             return View(recoletas.ToList());
@@ -79,8 +85,14 @@ namespace SistemaSetorTecnico.Controllers
         }
 
         // GET: Recoletas/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            // Busca os Status no banco de dados
+            var statusList = await _context.Status.ToListAsync();
+
+            // Envia a lista de Status para a View usando ViewData
+            ViewData["StatusList"] = new SelectList(statusList, "Id", "Nome");
+
             return View();
         }
 
@@ -89,14 +101,36 @@ namespace SistemaSetorTecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Empresa,TecnicoResponsavel,DataRecoleta,LocalRecoleta,Serie,NumeroOS,NomePaciente,Exame,MotivoRecoleta,LaboratorioApoio,BioquimicoResponsavel,DataContato,ColetaConcluida")] Recoleta recoleta)
+        public async Task<IActionResult> Create([Bind("Id,Empresa,TecnicoResponsavel,DataRecoleta,LocalRecoleta,Serie,NumeroOS,NomePaciente,Exame,MotivoRecoleta,LaboratorioApoio,BioquimicoResponsavel,DataContato,StatusId,ColetaConcluida")] RecoletaDTO recoletaDto)
         {
+            var recoleta = new Recoleta
+            {
+                Id = recoletaDto.Id,
+                Empresa = recoletaDto.Empresa,
+                TecnicoResponsavel = recoletaDto.TecnicoResponsavel,
+                DataRecoleta = recoletaDto.DataRecoleta,
+                LocalRecoleta = recoletaDto.LocalRecoleta,
+                Serie = recoletaDto.Serie,
+                NumeroOS = recoletaDto.NumeroOS,
+                NomePaciente = recoletaDto.NomePaciente,
+                Exame = recoletaDto.Exame,
+                MotivoRecoleta = recoletaDto.MotivoRecoleta,
+                LaboratorioApoio = recoletaDto.LaboratorioApoio,
+                BioquimicoResponsavel = recoletaDto.BioquimicoResponsavel,
+                DataContato = recoletaDto.DataContato,
+                StatusId = recoletaDto.StatusId,
+                ColetaConcluida = recoletaDto.ColetaConcluida
+            };
+
             if (ModelState.IsValid)
             {
                 _context.Add(recoleta);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+
+            ViewData["StatusList"] = new SelectList(await _context.Status.ToListAsync(), "Id", "Nome");
+
             return View(recoleta);
         }
 

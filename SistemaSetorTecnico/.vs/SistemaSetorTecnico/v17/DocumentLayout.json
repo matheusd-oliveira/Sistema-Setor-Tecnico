@@ -1,12 +1,106 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\controllers\\recoletascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:controllers\\recoletascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\dtos\\recoletadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:dtos\\recoletadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\models\\recoleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:models\\recoleta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\recoletas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\recoletas\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:models\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Status.cs",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Models\\Status.cs",
+              "RelativeDocumentMoniker": "Models\\Status.cs",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Models\\Status.cs",
+              "RelativeToolTip": "Models\\Status.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T18:54:19.73Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RecoletaDTO.cs",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\DTOs\\RecoletaDTO.cs",
+              "RelativeDocumentMoniker": "DTOs\\RecoletaDTO.cs",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\DTOs\\RecoletaDTO.cs",
+              "RelativeToolTip": "DTOs\\RecoletaDTO.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T20:37:21.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RecoletasController.cs",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Controllers\\RecoletasController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RecoletasController.cs",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Controllers\\RecoletasController.cs",
+              "RelativeToolTip": "Controllers\\RecoletasController.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAMwHkAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-24T14:29:34.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Recoletas\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Recoletas\\Create.cshtml",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Recoletas\\Create.cshtml",
+              "RelativeToolTip": "Views\\Recoletas\\Create.cshtml",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAqwHEAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-24T14:14:40.561Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Recoleta.cs",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Models\\Recoleta.cs",
+              "RelativeDocumentMoniker": "Models\\Recoleta.cs",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Models\\Recoleta.cs",
+              "RelativeToolTip": "Models\\Recoleta.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAkwDwAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-21T17:52:25.162Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

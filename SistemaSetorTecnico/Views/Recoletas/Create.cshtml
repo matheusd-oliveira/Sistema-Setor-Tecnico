@@ -103,6 +103,16 @@
             }
             <div class="mb-4">
                 <div class="form-group">
+                    <label asp-for="StatusId" class="control-label">Status</label>
+                    <select asp-for="StatusId" asp-items="@((IEnumerable<SelectListItem>)ViewData["StatusList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Selecione um Status</option>
+                    </select>
+                    <span asp-validation-for="StatusId" class="text-danger"></span>
+
+                </div>
+            </div>
+            <div class="mb-4">
+                <div class="form-group">
                     <label asp-for="ColetaConcluida" class="control-label"></label>
                     <input type="checkbox" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="ColetaConcluida" class="form-control" />
                     <span asp-validation-for="ColetaConcluida" class="text-danger"></span>
