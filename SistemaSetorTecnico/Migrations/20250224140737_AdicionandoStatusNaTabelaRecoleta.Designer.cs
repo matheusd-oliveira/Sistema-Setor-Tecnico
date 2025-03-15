@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SistemaSetorTecnico.Data;
 
@@ -11,9 +12,11 @@ using SistemaSetorTecnico.Data;
 namespace SistemaSetorTecnico.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
-    {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+    [Migration("20250224140737_AdicionandoStatusNaTabelaRecoleta")]
+    partial class AdicionandoStatusNaTabelaRecoleta
+    { 
+        /// <inheritdoc />
+        protected void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -88,11 +91,13 @@ namespace SistemaSetorTecnico.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("LocalidadesId")
-                        .HasColumnType("int");
+                    b.Property<string>("LocalRecoleta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("MotivosId")
-                        .HasColumnType("int");
+                    b.Property<string>("MotivoRecoleta")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NomePaciente")
                         .IsRequired()
@@ -114,10 +119,6 @@ namespace SistemaSetorTecnico.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("LocalidadesId");
-
-                    b.HasIndex("MotivosId");
 
                     b.HasIndex("StatusId");
 
@@ -177,39 +178,13 @@ namespace SistemaSetorTecnico.Migrations
 
             modelBuilder.Entity("SistemaSetorTecnico.Models.Recoleta", b =>
                 {
-                    b.HasOne("SistemaSetorTecnico.Models.Localidade", "Localidades")
-                        .WithMany("Recoleta")
-                        .HasForeignKey("LocalidadesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SistemaSetorTecnico.Models.Motivo", "Motivos")
-                        .WithMany("Recoleta")
-                        .HasForeignKey("MotivosId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("SistemaSetorTecnico.Models.Status", "Status")
                         .WithMany("Recoleta")
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Localidades");
-
-                    b.Navigation("Motivos");
-
                     b.Navigation("Status");
-                });
-
-            modelBuilder.Entity("SistemaSetorTecnico.Models.Localidade", b =>
-                {
-                    b.Navigation("Recoleta");
-                });
-
-            modelBuilder.Entity("SistemaSetorTecnico.Models.Motivo", b =>
-                {
-                    b.Navigation("Recoleta");
                 });
 
             modelBuilder.Entity("SistemaSetorTecnico.Models.Status", b =>

@@ -4,12 +4,20 @@
     ViewData["Title"] = "Nova Recoleta";
 }
 
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="/Logo_Analise.ico" rel="shortcut icon" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
-    <div class="flex items-center justify-between mb-6">
+    <div class="flex items-center justify-center mb-6">
         <h1 class="text-2xl font-bold text-gray-800">Adicionar Recoleta</h1\>
     </div>
-
-    <div class="w-full max-w-md p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+    @* w-full max-w-md *@
+    <div class="flex items-center justify-center min-h-screen p-6 bg-white border border-gray-200 rounded-lg shadow-md">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" />
@@ -37,9 +45,12 @@
             </div>
             <div class="mb-4">
                 <div class="form-group">
-                    <label asp-for="LocalRecoleta" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="LocalRecoleta" class="form-control" />
-                    <span asp-validation-for="LocalRecoleta" class="text-danger"></span>
+                    <label asp-for="LocalidadesId" class="control-label">Local de Recoleta</label>
+                    <select asp-for="LocalidadesId" asp-items="@((IEnumerable<SelectListItem>)ViewData["LocaisList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Selecione um Local</option>
+                    </select>
+                    <span asp-validation-for="LocalidadesId" class="text-danger"></span>
+
                 </div>
             </div>
             <div class="mb-4">
@@ -72,9 +83,12 @@
             </div>
             <div class="mb-4">
                 <div class="form-group">
-                    <label asp-for="MotivoRecoleta" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="MotivoRecoleta" class="form-control" />
-                    <span asp-validation-for="MotivoRecoleta" class="text-danger"></span>
+                    <label asp-for="MotivosId" class="control-label">Motivo da Recoleta</label>
+                    <select asp-for="MotivosId" asp-items="@((IEnumerable<SelectListItem>)ViewData["MotivosList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <option value="">Selecione um Motivo</option>
+                    </select>
+                    <span asp-validation-for="MotivosId" class="text-danger"></span>
+
                 </div>
             </div>
             <div class="mb-4">

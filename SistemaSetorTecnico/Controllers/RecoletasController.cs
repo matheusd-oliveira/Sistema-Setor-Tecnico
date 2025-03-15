@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using SistemaSetorTecnico.Data;
 using SistemaSetorTecnico.DTOs;
 using SistemaSetorTecnico.Models;
+using SistemaSetorTecnico.ViewModels;
 
 namespace SistemaSetorTecnico.Controllers
 {
@@ -31,13 +32,15 @@ namespace SistemaSetorTecnico.Controllers
             // Pegando a data atual
             var dataAtual = DateTime.Now;
 
-            // Recupera todas as recoletas do sistema
-            var recoletas = _context.Recoletas.AsQueryable();
+            //// Recupera todas as recoletas do sistema
+            var recoletas = _context.Recoletas.Include(r => r.Motivos).Include(s => s.Status).Include(l => l.Localidades).AsQueryable();
+
+            var selectedDate = new DateTime();
 
             // Recupera todas as recoletas por mês vigente
             if (string.IsNullOrEmpty(searchValue))
             {
-                recoletas = _context.Recoletas.
+                recoletas = recoletas.
                 Where(r => r.DataRecoleta.Month == dataAtual.Month && r.DataRecoleta.Year == dataAtual.Year);
             }
 
@@ -51,7 +54,7 @@ namespace SistemaSetorTecnico.Controllers
             if (searchBy == "Data" && !string.IsNullOrEmpty(searchValue))
             {
                 // Tentar interpretar o searchValue como mês/ano (formato esperado: MM/YYYY)
-                if (DateTime.TryParseExact(searchValue, "MM/yyyy", null, System.Globalization.DateTimeStyles.None, out var selectedDate))
+                if (DateTime.TryParseExact(searchValue, "MM/yyyy", null, System.Globalization.DateTimeStyles.None, out selectedDate))
                 {
                     recoletas = recoletas.Where(r => r.DataRecoleta.Month == selectedDate.Month && r.DataRecoleta.Year == selectedDate.Year);
                 }
@@ -90,8 +93,17 @@ namespace SistemaSetorTecnico.Controllers
             // Busca os Status no banco de dados
             var statusList = await _context.Status.ToListAsync();
 
-            // Envia a lista de Status para a View usando ViewData
+            // Busca os motivos no banco de dados
+            var motivosList = await _context.Motivos.ToListAsync();
+
+            // Busca as localidades no banco de dados
+            var locaisList = await _context.Localidades.ToListAsync();
+
+            // Envia a lista de Status,Motivos e Localidades para a View usando ViewData
             ViewData["StatusList"] = new SelectList(statusList, "Id", "Nome");
+            ViewData["MotivosList"] = new SelectList(motivosList, "Id", "Nome");
+            ViewData["LocaisList"] = new SelectList(locaisList, "Id", "Nome");
+
 
             return View();
         }
@@ -101,7 +113,7 @@ namespace SistemaSetorTecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Empresa,TecnicoResponsavel,DataRecoleta,LocalRecoleta,Serie,NumeroOS,NomePaciente,Exame,MotivoRecoleta,LaboratorioApoio,BioquimicoResponsavel,DataContato,StatusId,ColetaConcluida")] RecoletaDTO recoletaDto)
+        public async Task<IActionResult> Create([Bind("Id,Empresa,TecnicoResponsavel,DataRecoleta,LocalidadesId,Serie,NumeroOS,NomePaciente,Exame,MotivosId,LaboratorioApoio,BioquimicoResponsavel,DataContato,StatusId,ColetaConcluida")] RecoletaDTO recoletaDto)
         {
             var recoleta = new Recoleta
             {
@@ -109,12 +121,12 @@ namespace SistemaSetorTecnico.Controllers
                 Empresa = recoletaDto.Empresa,
                 TecnicoResponsavel = recoletaDto.TecnicoResponsavel,
                 DataRecoleta = recoletaDto.DataRecoleta,
-                LocalRecoleta = recoletaDto.LocalRecoleta,
+                LocalidadesId = recoletaDto.LocalidadesId,
                 Serie = recoletaDto.Serie,
                 NumeroOS = recoletaDto.NumeroOS,
                 NomePaciente = recoletaDto.NomePaciente,
                 Exame = recoletaDto.Exame,
-                MotivoRecoleta = recoletaDto.MotivoRecoleta,
+                MotivosId = recoletaDto.MotivosId,
                 LaboratorioApoio = recoletaDto.LaboratorioApoio,
                 BioquimicoResponsavel = recoletaDto.BioquimicoResponsavel,
                 DataContato = recoletaDto.DataContato,
@@ -130,6 +142,8 @@ namespace SistemaSetorTecnico.Controllers
             }
 
             ViewData["StatusList"] = new SelectList(await _context.Status.ToListAsync(), "Id", "Nome");
+            ViewData["MotivosList"] = new SelectList(await _context.Motivos.ToListAsync(), "Id", "Nome");
+            ViewData["LocaisList"] = new SelectList(await _context.Localidades.ToListAsync(), "Id", "Nome");
 
             return View(recoleta);
         }

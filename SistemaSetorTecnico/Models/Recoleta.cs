@@ -21,9 +21,10 @@ namespace SistemaSetorTecnico.Models
         [Required(ErrorMessage = "Preencha a data que foi realizada a recoleta.")]
         public DateTime DataRecoleta { get; set; }
 
+        // chave estrangeira
         [DisplayName("Local da Recoleta")]
         [Required(ErrorMessage = "Qual o local da recoleta?")]
-        public string LocalRecoleta { get; set; }
+        public int LocalidadesId { get; set; }
 
         [DisplayName("Série")]
         [Required(ErrorMessage = "Preencha o número de série")]
@@ -39,9 +40,10 @@ namespace SistemaSetorTecnico.Models
 
         public string Exame { get; set; }
 
+        // chave estrangeira
         [DisplayName("Motivo da Recoleta")]
         [Required(ErrorMessage = "Qual o motivo da recoleta?")]
-        public string MotivoRecoleta { get; set; }
+        public int MotivosId { get; set; }
 
         [DisplayName("Laboratorio de Apoio")]
         [Required(ErrorMessage = "Insira o laboratório de apoio.")]
@@ -57,15 +59,18 @@ namespace SistemaSetorTecnico.Models
 
 
         // Chave estrangeira
-        //[ForeignKey("StatusId")]
         public int StatusId { get; set; }
 
         [DisplayName("Coleta Concluida")]
         public bool ColetaConcluida { get; set; }
 
-        //// Propriedade de navegação.
-        [NotMapped]
+        //// Propriedades de navegação.
+        
         public Status Status { get; set; }
+        
+        public Motivo Motivos { get; set; }
+        
+        public Localidade Localidades { get; set; }
         
         
 

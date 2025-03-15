@@ -1,4 +1,6 @@
-﻿namespace SistemaSetorTecnico.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace SistemaSetorTecnico.Models
 {
     public class Localidade
     {
@@ -9,5 +11,8 @@
         {
             Nome = nome.ToUpper();
         }
+
+        
+        public ICollection<Recoleta> Recoleta { get; set; }
     }
 }
