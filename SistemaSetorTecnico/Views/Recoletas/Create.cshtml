@@ -11,6 +11,22 @@
     <title>Login</title>
     <link href="/Logo_Analise.ico" rel="shortcut icon" type="image/x-icon" />
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            background-attachment: fixed;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            margin: auto;
+        }
+    </style>
+
 </head>
 <body class="flex items-center justify-center min-h-screen bg-gray-100">
     <div class="flex items-center justify-center mb-6">
@@ -24,7 +40,7 @@
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="Empresa" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Empresa" class="form-control" />
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Empresa" class="form-control" required />
                     <span asp-validation-for="Empresa" class="text-danger"></span>
                 </div>
             </div>
@@ -32,69 +48,67 @@
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="TecnicoResponsavel" class="control-label"></label>
-                    <input value="@User.Identity.Name" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="TecnicoResponsavel" class="form-control" readonly/>
+                    <input value="@User.Identity.Name" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="TecnicoResponsavel" class="form-control" readonly />
                     <span asp-validation-for="TecnicoResponsavel" class="text-danger"></span>
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="DataRecoleta" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="DataRecoleta" class="form-control" />
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="DataRecoleta" class="form-control" required />
                     <span asp-validation-for="DataRecoleta" class="text-danger"></span>
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="LocalidadesId" class="control-label">Local de Recoleta</label>
-                    <select asp-for="LocalidadesId" asp-items="@((IEnumerable<SelectListItem>)ViewData["LocaisList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select asp-for="LocalidadesId" asp-items="@((IEnumerable<SelectListItem>)ViewData["LocaisList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
                         <option value="">Selecione um Local</option>
                     </select>
                     <span asp-validation-for="LocalidadesId" class="text-danger"></span>
-
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="Serie" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Serie" class="form-control" />
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Serie" class="form-control" required />
                     <span asp-validation-for="Serie" class="text-danger"></span>
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="NumeroOS" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="NumeroOS" class="form-control" />
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="NumeroOS" class="form-control" required />
                     <span asp-validation-for="NumeroOS" class="text-danger"></span>
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="NomePaciente" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="NomePaciente" class="form-control" />
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="NomePaciente" class="form-control" required />
                     <span asp-validation-for="NomePaciente" class="text-danger"></span>
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="Exame" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Exame" class="form-control" />
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="Exame" class="form-control" required />
                     <span asp-validation-for="Exame" class="text-danger"></span>
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="MotivosId" class="control-label">Motivo da Recoleta</label>
-                    <select asp-for="MotivosId" asp-items="@((IEnumerable<SelectListItem>)ViewData["MotivosList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select asp-for="MotivosId" asp-items="@((IEnumerable<SelectListItem>)ViewData["MotivosList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
                         <option value="">Selecione um Motivo</option>
                     </select>
                     <span asp-validation-for="MotivosId" class="text-danger"></span>
-
                 </div>
             </div>
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="LaboratorioApoio" class="control-label"></label>
-                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="LaboratorioApoio" class="form-control" />
+                    <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="LaboratorioApoio" class="form-control" required />
                     <span asp-validation-for="LaboratorioApoio" class="text-danger"></span>
                 </div>
             </div>
@@ -103,14 +117,14 @@
                 <div class="mb-4">
                     <div class="form-group">
                         <label asp-for="BioquimicoResponsavel" class="control-label"></label>
-                        <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="BioquimicoResponsavel" class="form-control" />
+                        <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="BioquimicoResponsavel" class="form-control" required />
                         <span asp-validation-for="BioquimicoResponsavel" class="text-danger"></span>
                     </div>
                 </div>
                 <div class="mb-4">
                     <div class="form-group">
                         <label asp-for="DataContato" class="control-label"></label>
-                        <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="DataContato" class="form-control" />
+                        <input class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="DataContato" class="form-control" required />
                         <span asp-validation-for="DataContato" class="text-danger"></span>
                     </div>
                 </div>
@@ -118,7 +132,7 @@
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="StatusId" class="control-label">Status</label>
-                    <select asp-for="StatusId" asp-items="@((IEnumerable<SelectListItem>)ViewData["StatusList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <select asp-for="StatusId" asp-items="@((IEnumerable<SelectListItem>)ViewData["StatusList"])" class="form-control w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
                         <option value="">Selecione um Status</option>
                     </select>
                     <span asp-validation-for="StatusId" class="text-danger"></span>
@@ -128,7 +142,7 @@
             <div class="mb-4">
                 <div class="form-group">
                     <label asp-for="ColetaConcluida" class="control-label"></label>
-                    <input type="checkbox" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="ColetaConcluida" class="form-control" />
+                    <input type="checkbox" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" asp-for="ColetaConcluida" class="form-control" hidden />
                     <span asp-validation-for="ColetaConcluida" class="text-danger"></span>
                 </div>
             </div>
@@ -142,10 +156,11 @@
 
             <div class="mb-4">
                 <button class="w-full px-4 py-2 text-white bg-red-600 rounded-md hover:bg-red-700 focus:ring-4 focus:ring-blue-300 focus:outline-none"
-                        asp-action="Index" asp-controller="Recoletas">
+                        formnovalidate asp-action="Index" asp-controller="Recoletas">
                     Voltar
                 </button>
             </div>
         </form>
     </div>
 </body>
+

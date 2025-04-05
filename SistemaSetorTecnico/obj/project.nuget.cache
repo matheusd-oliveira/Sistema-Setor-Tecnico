@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Kd5swuFyQpMDz6l/EtxaZStGIqPA4H8jlkULimf1muxfgJ1KjGFRv9MZ6wGVEJaiOTilgpqBaVUVPvRZixxwyg==",
+  "dgSpecHash": "GPc1KkD6LnCJ8JfF1lnoEghGHqW9pAprO3SFKWbhBfRDMauuZ8jsm9QLb1hcgE4kyGGq0Xxzl0//NAel2Nkx6A==",
   "success": true,
   "projectFilePath": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
   "expectedPackageFiles": [
@@ -190,7 +190,9 @@
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.threading.tasks.dataflow\\7.0.0\\system.threading.tasks.dataflow.7.0.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
-    "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512"
+    "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.windows.extensions\\7.0.0\\system.windows.extensions.7.0.0.nupkg.sha512",
+    "C:\\Users\\matheus.oliveira\\.nuget\\packages\\x.pagedlist\\10.5.7\\x.pagedlist.10.5.7.nupkg.sha512",
+    "C:\\Users\\matheus.oliveira\\.nuget\\packages\\x.pagedlist.mvc.core\\10.5.7\\x.pagedlist.mvc.core.10.5.7.nupkg.sha512"
   ],
   "logs": []
 }

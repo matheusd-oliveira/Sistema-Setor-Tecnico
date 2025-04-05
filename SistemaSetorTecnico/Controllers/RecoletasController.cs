@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Hosting;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SistemaSetorTecnico.Data;
 using SistemaSetorTecnico.DTOs;
 using SistemaSetorTecnico.Models;
-using SistemaSetorTecnico.ViewModels;
+using X.PagedList.Extensions;
 
 namespace SistemaSetorTecnico.Controllers
+
 {
     [Authorize]
     public class RecoletasController : Controller
@@ -27,7 +23,7 @@ namespace SistemaSetorTecnico.Controllers
         }
 
         // GET: Recoletas
-        public async Task<IActionResult> Index(string searchBy, string searchValue)
+        public async Task<IActionResult> Index(string searchBy, string searchValue, int page = 1)
         {
             // Pegando a data atual
             var dataAtual = DateTime.Now;
@@ -63,8 +59,9 @@ namespace SistemaSetorTecnico.Controllers
                     // Opcional: Adicionar lógica para tratar valores inválidos
                     ModelState.AddModelError("", "O formato da data deve ser MM/YYYY.");
                 }
- 
+
             }
+
             // Retorna os dados para a View
             return View(recoletas.ToList());
         }
@@ -115,28 +112,43 @@ namespace SistemaSetorTecnico.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Empresa,TecnicoResponsavel,DataRecoleta,LocalidadesId,Serie,NumeroOS,NomePaciente,Exame,MotivosId,LaboratorioApoio,BioquimicoResponsavel,DataContato,StatusId,ColetaConcluida")] RecoletaDTO recoletaDto)
         {
+            //if (recoletaDto.BioquimicoResponsavel == null || recoletaDto.DataContato == null)
+            //{
+            //    recoletaDto.BioquimicoResponsavel = "ALTERE O NOME";
+            //    recoletaDto.DataContato = DateTime.Now;
+            //}
+
+            if (recoletaDto.BioquimicoResponsavel == null && recoletaDto.DataContato == null)
+            {
+                recoletaDto.BioquimicoResponsavel = "";
+                recoletaDto.DataContato = new DateTime();
+
+            }
+
             var recoleta = new Recoleta
             {
                 Id = recoletaDto.Id,
-                Empresa = recoletaDto.Empresa,
-                TecnicoResponsavel = recoletaDto.TecnicoResponsavel,
+                Empresa = recoletaDto.Empresa.ToUpper(),
+                TecnicoResponsavel = recoletaDto.TecnicoResponsavel.ToUpper(),
                 DataRecoleta = recoletaDto.DataRecoleta,
                 LocalidadesId = recoletaDto.LocalidadesId,
                 Serie = recoletaDto.Serie,
                 NumeroOS = recoletaDto.NumeroOS,
-                NomePaciente = recoletaDto.NomePaciente,
-                Exame = recoletaDto.Exame,
+                NomePaciente = recoletaDto.NomePaciente.ToUpper(),
+                Exame = recoletaDto.Exame.ToUpper(),
                 MotivosId = recoletaDto.MotivosId,
-                LaboratorioApoio = recoletaDto.LaboratorioApoio,
-                BioquimicoResponsavel = recoletaDto.BioquimicoResponsavel,
-                DataContato = recoletaDto.DataContato,
+                LaboratorioApoio = recoletaDto.LaboratorioApoio.ToUpper(),
+                BioquimicoResponsavel = recoletaDto?.BioquimicoResponsavel.ToUpper(),
+                DataContato = recoletaDto?.DataContato,
                 StatusId = recoletaDto.StatusId,
                 ColetaConcluida = recoletaDto.ColetaConcluida
             };
 
+
+
             if (ModelState.IsValid)
             {
-                _context.Add(recoleta);
+                _context.Recoletas.Add(recoleta);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -151,6 +163,20 @@ namespace SistemaSetorTecnico.Controllers
         // GET: Recoletas/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            // Busca os Status no banco de dados
+            var statusList = await _context.Status.ToListAsync();
+
+            // Busca os motivos no banco de dados
+            var motivosList = await _context.Motivos.ToListAsync();
+
+            // Busca as localidades no banco de dados
+            var locaisList = await _context.Localidades.ToListAsync();
+
+            // Envia a lista de Status,Motivos e Localidades para a View usando ViewData
+            ViewData["StatusList"] = new SelectList(statusList, "Id", "Nome");
+            ViewData["MotivosList"] = new SelectList(motivosList, "Id", "Nome");
+            ViewData["LocaisList"] = new SelectList(locaisList, "Id", "Nome");
+
             if (id == null)
             {
                 return NotFound();
@@ -169,8 +195,39 @@ namespace SistemaSetorTecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Empresa,TecnicoResponsavel,DataRecoleta,LocalRecoleta,Serie,NumeroOS,NomePaciente,Exame,MotivoRecoleta,LaboratorioApoio,BioquimicoResponsavel,DataContato,ColetaConcluida")] Recoleta recoleta)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Empresa,TecnicoResponsavel,DataRecoleta,LocalidadesId,Serie,NumeroOS,NomePaciente,Exame,MotivosId,LaboratorioApoio,BioquimicoResponsavel,DataContato,StatusId,ColetaConcluida")] RecoletaDTO recoletaDto)
         {
+
+            if (recoletaDto.BioquimicoResponsavel == null && recoletaDto.DataContato == null)
+            {
+                recoletaDto.BioquimicoResponsavel = "";
+                recoletaDto.DataContato = new DateTime();
+
+            }
+
+            var recoleta = new Recoleta
+            {
+                Id = recoletaDto.Id,
+                Empresa = recoletaDto.Empresa.ToUpper(),
+                TecnicoResponsavel = recoletaDto.TecnicoResponsavel.ToUpper(),
+                DataRecoleta = recoletaDto.DataRecoleta,
+                LocalidadesId = recoletaDto.LocalidadesId,
+                Serie = recoletaDto.Serie,
+                NumeroOS = recoletaDto.NumeroOS,
+                NomePaciente = recoletaDto.NomePaciente.ToUpper(),
+                Exame = recoletaDto.Exame.ToUpper(),
+                MotivosId = recoletaDto.MotivosId,
+                LaboratorioApoio = recoletaDto.LaboratorioApoio.ToUpper(),
+                BioquimicoResponsavel = recoletaDto?.BioquimicoResponsavel.ToUpper(),
+                DataContato = recoletaDto?.DataContato,
+                StatusId = recoletaDto.StatusId,
+                ColetaConcluida = recoletaDto.ColetaConcluida
+            };
+
+            ViewData["StatusList"] = new SelectList(await _context.Status.ToListAsync(), "Id", "Nome");
+            ViewData["MotivosList"] = new SelectList(await _context.Motivos.ToListAsync(), "Id", "Nome");
+            ViewData["LocaisList"] = new SelectList(await _context.Localidades.ToListAsync(), "Id", "Nome");
+
             if (id != recoleta.Id)
             {
                 return NotFound();

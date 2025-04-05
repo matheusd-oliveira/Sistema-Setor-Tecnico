@@ -31,6 +31,7 @@ namespace SistemaSetorTecnico.Controllers
 
             if (usuario == null) // Criar encriptação posteriormente.
             {
+                TempData["ErrorMessage"] = "Usuário ou senha inválidos.";
                 ModelState.AddModelError("", "E-mail ou senha inválidos!");
                 return View();
             }
@@ -40,6 +41,7 @@ namespace SistemaSetorTecnico.Controllers
 
             if (result != PasswordVerificationResult.Success)
             {
+                TempData["ErrorMessage"] = "Usuário ou senha inválidos.";
                 ModelState.AddModelError("", "E-mail ou senha inválidos!");
                 return View();
             }
@@ -61,6 +63,8 @@ namespace SistemaSetorTecnico.Controllers
             var principal = new ClaimsPrincipal(identity);
 
             await HttpContext.SignInAsync("Cookies", principal);
+            TempData["SuccessMessage"] = "Login realizado com sucesso!";
+            Thread.Sleep(1000);
 
             return RedirectToAction("Index", "Home");
         }
