@@ -58,6 +58,10 @@ namespace SistemaSetorTecnico.Controllers
             {
                 claims.Add(new Claim(ClaimTypes.Role, "Admin"));
             }
+            if (usuario.IsBioquimico)
+            {
+                claims.Add(new Claim(ClaimTypes.Role, "Bioquimico"));
+            }
 
             var identity = new ClaimsIdentity(claims, "Cookies");
             var principal = new ClaimsPrincipal(identity);

@@ -1,7 +1,4 @@
 ﻿@model IEnumerable<SistemaSetorTecnico.Models.Recoleta>
-@using X.PagedList
-@using X.PagedList.Mvc;
-@using X.PagedList.Mvc.Core
 
 @{
     ViewData["Title"] = "Lista de Recoletas";
@@ -81,17 +78,17 @@
 
 
                         @* @if (item.ColetaConcluida)
-                        {
-                            <td>
-                                <span class="bg-green-100 text-green-700 text-sm px-2 py-1 rounded">Concluído @Html.DisplayFor(modelItem => item.ColetaConcluida)</span>
-                            </td>
-                        }
-                        @if (!item.ColetaConcluida)
-                        {
-                            <td>
-                                <span class="bg-red-100 text-red-700 text-sm px-2 py-1 rounded">Concluído @Html.DisplayFor(modelItem => item.ColetaConcluida)</span>
-                            </td>
-                        } *@
+                    {
+                    <td>
+                    <span class="bg-green-100 text-green-700 text-sm px-2 py-1 rounded">Concluído @Html.DisplayFor(modelItem => item.ColetaConcluida)</span>
+                    </td>
+                    }
+                    @if (!item.ColetaConcluida)
+                    {
+                    <td>
+                    <span class="bg-red-100 text-red-700 text-sm px-2 py-1 rounded">Concluído @Html.DisplayFor(modelItem => item.ColetaConcluida)</span>
+                    </td>
+                    } *@
                         <td class="py-3 px-6 text-center">
                             <div class="flex justify-center space-x-4">
                                 <a class="text-blue-600 hover:text-blue-800 flex items-center space-x-1" asp-controller="Recoletas" asp-action="Edit" asp-route-id="@item.Id">
@@ -145,13 +142,14 @@
                                 Cancelar
                             </button>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     function togglePlaceholder() {
         const searchBy = document.getElementById("searchBy").value;
@@ -175,7 +173,7 @@
         modal.classList.add("hidden");
     }
     function setItemToDelete(itemId) {
-           
+
         const modal = document.getElementById("deleteModal");
         modal.classList.remove("hidden");
 

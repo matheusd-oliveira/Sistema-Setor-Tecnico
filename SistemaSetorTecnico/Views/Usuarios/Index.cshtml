@@ -4,44 +4,50 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<head>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DataCadastro)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DataCadastro)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+        div > h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<div class="container mx-auto px-4 py-6">
+    <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold text-gray-800">Usuários do Sistema</h1>
+        <a class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" asp-action="Create">Novo Usuário</a>
+    </div>
+
+
+    <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow text-sm">
+            <thead>
+                <tr class="bg-gray-100 text-gray-700">
+                    <th class="py-3 px-3 text-center">@Html.DisplayNameFor(model => model.Nome)</th>
+                    <th class="py-3 px-3 text-center">@Html.DisplayNameFor(model => model.Email)</th>
+                    <th class="py-3 px-3 text-center">@Html.DisplayNameFor(model => model.DataCadastro)</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr class="border-t text-xs">
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.Nome)</td>
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td class="py-3 px-3 text-center">@Html.DisplayFor(modelItem => item.DataCadastro)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Detalhar</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+</div>

@@ -5,7 +5,9 @@ using Microsoft.EntityFrameworkCore;
 using SistemaSetorTecnico.Data;
 using SistemaSetorTecnico.DTOs;
 using SistemaSetorTecnico.Models;
+using System.Drawing.Printing;
 using X.PagedList.Extensions;
+using X.PagedList;
 
 namespace SistemaSetorTecnico.Controllers
 
@@ -23,13 +25,17 @@ namespace SistemaSetorTecnico.Controllers
         }
 
         // GET: Recoletas
-        public async Task<IActionResult> Index(string searchBy, string searchValue, int page = 1)
+        public async Task<IActionResult> Index(string searchBy, string searchValue, int? page)
         {
             // Pegando a data atual
             var dataAtual = DateTime.Now;
 
             //// Recupera todas as recoletas do sistema
-            var recoletas = _context.Recoletas.Include(r => r.Motivos).Include(s => s.Status).Include(l => l.Localidades).AsQueryable();
+            var recoletas = _context.Recoletas
+                .Include(r => r.Motivos)
+                .Include(s => s.Status)
+                .Include(l => l.Localidades)
+                .AsQueryable();
 
             var selectedDate = new DateTime();
 

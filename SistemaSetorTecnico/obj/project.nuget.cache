@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "GPc1KkD6LnCJ8JfF1lnoEghGHqW9pAprO3SFKWbhBfRDMauuZ8jsm9QLb1hcgE4kyGGq0Xxzl0//NAel2Nkx6A==",
+  "dgSpecHash": "1/QZqwqLWTMU+dXGcCZCXxddk7h+5fueFUjQ8tWAoxgcTEm6/JYOa1RIUHI7nQYS+JkxuthCEhfNDgViTLDZMg==",
   "success": true,
   "projectFilePath": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\SistemaSetorTecnico.csproj",
   "expectedPackageFiles": [
@@ -149,6 +149,7 @@
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\nuget.projectmodel\\6.11.0\\nuget.projectmodel.6.11.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\nuget.protocol\\6.11.0\\nuget.protocol.6.11.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\nuget.versioning\\6.11.0\\nuget.versioning.6.11.0.nupkg.sha512",
+    "C:\\Users\\matheus.oliveira\\.nuget\\packages\\servicestack.interfaces\\8.6.0\\servicestack.interfaces.8.6.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.clientmodel\\1.0.0\\system.clientmodel.1.0.0.nupkg.sha512",
     "C:\\Users\\matheus.oliveira\\.nuget\\packages\\system.codedom\\6.0.0\\system.codedom.6.0.0.nupkg.sha512",

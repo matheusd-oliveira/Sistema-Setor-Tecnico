@@ -4,51 +4,76 @@
     ViewData["Title"] = "Edição";
 }
 
-<h1>Editar Usuário</h1>
+<head>
+    <style>
+        body {
+            background-attachment: fixed;
+            margin: auto;
+        }
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Senha" class="control-label"></label>
-                <input asp-for="Senha" class="form-control" />
-                <span asp-validation-for="Senha" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="IsBioquimico" class="control-label"></label>
-                <input asp-for="IsBioquimico" class="form-control" type="checkbox" />
-                <span asp-validation-for="IsBioquimico" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label" asp-for="IsAdmin" class="control-label"></label>
-                <input asp-for="IsAdmin" class="form-check-input" type="checkbox" />
-                <span asp-validation-for="IsAdmin" class="text-danger"></span>
-            </div>
-            <br />
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-            </div>
-        </form>
+        h1 {
+            text-align: center;
+        }
+
+        div {
+            margin: auto;
+        }
+    </style>
+</head>
+
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="container mx-auto px-4 py-6">
+        <div class="mb-6">
+            <h1 class="text-2xl font-bold text-gray-800">Edição do Usuário</h1>
+        </div>
     </div>
-</div>
+    <div>
+        <div class="flex items-center justify-center min-h-screen p-6 bg-white border border-gray-200 rounded-lg shadow-md">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-4">
+                    <div class="form-group">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" class="form-control" required />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                </div>
 
-<div>
-    <a asp-action="Index">Voltar</a>
-</div>
+                <div class="mb-4">
+                    <label asp-for="Email" class="control-label"></label>
+                    <input asp-for="Email" class="w-full  px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" class="form-control" required />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="Senha" class="control-label"></label>
+                    <input type="password" asp-for="Senha" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" class="form-control" required />
+                    <span asp-validation-for="Senha" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="DataCadastro" class="control-label"></label>
+                    <input type="datetime" asp-for="DataCadastro" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" class="form-control" required />
+                    <span asp-validation-for="DataCadastro" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="IsBioquimico" class="control-label">Bioquimico</label>
+                    <input type="checkbox" asp-for="IsBioquimico" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" class="form-control" />
+                    <span asp-validation-for="IsBioquimico" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="IsAdmin" class="control-label">Administrador</label>
+                    <input type="checkbox" asp-for="IsAdmin" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" class="form-control" />
+                    <span asp-validation-for="IsAdmin" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <input type="submit" value="Editar" class="w-full px-4 py-2 mt-1 text-sm text-gray-800 border border-gray-300 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" class="btn btn-primary" />
+                </div>
+                <div class="mb-4">
+                    <button class="w-full bg-red-600 text-white px-4 py-2 mt-1 text-sm rounded hover:bg-red-700" formnovalidate asp-action="Index">Voltar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
+

@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[8.0.7, )"
             },
+            "ServiceStack.Interfaces": {
+              "target": "Package",
+              "version": "[8.6.0, )"
+            },
             "X.PagedList.Mvc.Core": {
               "target": "Package",
               "version": "[10.5.7, )"

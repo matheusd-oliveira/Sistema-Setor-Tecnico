@@ -75,7 +75,7 @@ namespace SistemaSetorTecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha,DataCadastro")] Usuario usuario)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Email,Senha,DataCadastro,IsBioquimico, IsAdmin")] Usuario usuario)
         {
             if (ModelState.IsValid)
             {
@@ -110,7 +110,7 @@ namespace SistemaSetorTecnico.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Senha,DataCadastro")] Usuario usuario)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Email,Senha,DataCadastro, IsAdmin, IsBioquimico")] Usuario usuario)
         {
             if (id != usuario.Id)
             {
@@ -121,6 +121,9 @@ namespace SistemaSetorTecnico.Controllers
             {
                 try
                 {
+                    var passwordHasher = new PasswordHasher<Usuario>();
+                    usuario.Senha = passwordHasher.HashPassword(usuario, usuario.Senha);
+
                     _context.Update(usuario);
                     await _context.SaveChangesAsync();
                 }

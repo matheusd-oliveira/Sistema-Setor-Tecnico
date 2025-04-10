@@ -7,24 +7,12 @@
       "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\recoletas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\shared\\_notifications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\shared\\_notifications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,74 +32,35 @@
               "RelativeDocumentMoniker": "Views\\Recoletas\\Index.cshtml",
               "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Recoletas\\Index.cshtml",
               "RelativeToolTip": "Views\\Recoletas\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAVAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T17:59:53.094Z",
+              "WhenOpened": "2025-04-10T18:26:25.783Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Usuarios\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuarios\\Create.cshtml",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Usuarios\\Create.cshtml",
+              "RelativeToolTip": "Views\\Usuarios\\Create.cshtml",
+              "ViewState": "AQIAADoAAAAAAAAAAAAAADAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T17:53:18.132Z",
+              "WhenOpened": "2025-04-10T17:29:05.479Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABLAAAA",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Usuarios\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Usuarios\\Edit.cshtml",
+              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Usuarios\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Usuarios\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T12:47:14.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "_Notifications.cshtml",
-              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Shared\\_Notifications.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Notifications.cshtml",
-              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Shared\\_Notifications.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Notifications.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABQAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T12:45:28.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
-              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Controllers\\AuthController.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAwwDMAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-04T12:42:45.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\Auth\\Login.cshtml",
-              "ToolTip": "D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "Views\\Auth\\Login.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAAB0AAAAgAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-04T12:33:21.994Z",
+              "WhenOpened": "2025-04-10T17:28:50.503Z",
               "EditorCaption": ""
             }
           ]

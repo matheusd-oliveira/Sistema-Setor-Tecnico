@@ -112,7 +112,7 @@
                     <span asp-validation-for="LaboratorioApoio" class="text-danger"></span>
                 </div>
             </div>
-            @if (User.IsInRole("Admin"))
+            @if ((User.IsInRole("Admin")) || (User.IsInRole("Bioquimico")))
             {
                 <div class="mb-4">
                     <div class="form-group">
