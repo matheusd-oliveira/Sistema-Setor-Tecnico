@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\recoletas\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\usuarios\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|d:\\projetos\\sistema-setor-tecnico\\sistemasetortecnico\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|D:\\Projetos\\Sistema-Setor-Tecnico\\SistemaSetorTecnico\\views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{409978A9-4F33-4844-B4B2-B06CBD44B0AE}|SistemaSetorTecnico.csproj|solutionrelative:views\\usuarios\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -47,8 +47,7 @@
               "RelativeToolTip": "Views\\Usuarios\\Create.cshtml",
               "ViewState": "AQIAADoAAAAAAAAAAAAAADAAAAApAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-10T17:29:05.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T17:29:05.479Z"
             },
             {
               "$type": "Document",
@@ -60,8 +59,7 @@
               "RelativeToolTip": "Views\\Usuarios\\Edit.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEsAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-04-10T17:28:50.503Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-10T17:28:50.503Z"
             }
           ]
         }
